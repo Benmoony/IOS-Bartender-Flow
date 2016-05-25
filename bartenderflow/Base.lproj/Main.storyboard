@@ -1,25 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c9d-fF-qUu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iOu-FX-c6t">
+            <objects>
+                <navigationController id="c9d-fF-qUu" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACv-Jn-eHg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8vA-Sg-AwA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWS-gR-m4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="438"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bartenderflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVI-EZ-zRr">
+                                <rect key="frame" x="61" y="248" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.031372549019607843" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Spirits">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHK-6y-4V3">
+                                <rect key="frame" x="254" y="248" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.76470588235294112" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Recipies">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTb-3E-uhV">
+                                <rect key="frame" x="61" y="446" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.15294117647058825" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ingredients">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz9-lH-8aA">
+                                <rect key="frame" x="254" y="446" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.90588235294117647" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Suggest">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gUf-4T-NC0" kind="show" id="qkH-gW-gIn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bartender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2b-7a-14Z">
+                                <rect key="frame" x="114" y="90" width="186" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="U2b-7a-14Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="1Lw-ar-hPj"/>
+                            <constraint firstItem="QHK-6y-4V3" firstAttribute="leading" secondItem="pVI-EZ-zRr" secondAttribute="trailing" constant="93" id="4px-Gb-N8p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QHK-6y-4V3" secondAttribute="trailing" constant="40" id="Br7-Y7-bxs"/>
+                            <constraint firstItem="Yz9-lH-8aA" firstAttribute="top" secondItem="QHK-6y-4V3" secondAttribute="bottom" constant="98" id="FvJ-jY-Y3u"/>
+                            <constraint firstItem="BTb-3E-uhV" firstAttribute="top" secondItem="pVI-EZ-zRr" secondAttribute="bottom" constant="98" id="KwD-Ro-Ujh"/>
+                            <constraint firstItem="pVI-EZ-zRr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="NyK-vm-MMz"/>
+                            <constraint firstItem="Yz9-lH-8aA" firstAttribute="leading" secondItem="BTb-3E-uhV" secondAttribute="trailing" constant="93" id="R9U-XA-AYH"/>
+                            <constraint firstItem="pVI-EZ-zRr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="170" id="ZXJ-7h-jVe"/>
+                            <constraint firstItem="U2b-7a-14Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e40-Cq-KMf"/>
+                            <constraint firstItem="QHK-6y-4V3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="170" id="wl2-Op-iZk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="99N-Jg-oBe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="337" y="438"/>
+        </scene>
+        <!--View Controllerwith Table-->
+        <scene sceneID="db8-fx-pxU">
+            <objects>
+                <viewController id="gUf-4T-NC0" customClass="ViewControllerwithTable" customModule="bartenderflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pzc-QJ-Yk4"/>
+                        <viewControllerLayoutGuide type="bottom" id="SuI-p4-jAx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qk8-p2-Cp2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggest-a-Drink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6H-3e-dyW">
+                                <rect key="frame" x="85" y="95" width="244" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a base" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZL-SZ-pFi">
+                                <rect key="frame" x="150" y="160" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-cD-dwe">
+                                <rect key="frame" x="192" y="231" width="31" height="30"/>
+                                <state key="normal" title="Rum"/>
+                                <connections>
+                                    <segue destination="QLh-ap-Ogl" kind="show" id="OhL-M3-ScL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th4-ZL-bjo">
+                                <rect key="frame" x="179" y="290" width="58" height="30"/>
+                                <state key="normal" title="Whiskey"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ3-zm-Nys">
+                                <rect key="frame" x="193" y="323" width="30" height="30"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-gw-lhq">
+                                <rect key="frame" x="183" y="317" width="49" height="30"/>
+                                <state key="normal" title="Tequila"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-yu-Ybf">
+                                <rect key="frame" x="186" y="260" width="43" height="30"/>
+                                <state key="normal" title="Vodka"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pZL-SZ-pFi" firstAttribute="top" secondItem="pzc-QJ-Yk4" secondAttribute="bottom" constant="96" id="7xj-3V-gMl"/>
+                            <constraint firstItem="jgC-yu-Ybf" firstAttribute="top" secondItem="Keg-cD-dwe" secondAttribute="bottom" constant="-3" id="8sF-0M-FUv"/>
+                            <constraint firstItem="Keg-cD-dwe" firstAttribute="centerX" secondItem="qk8-p2-Cp2" secondAttribute="centerX" id="Lup-w6-KgJ"/>
+                            <constraint firstItem="V6H-3e-dyW" firstAttribute="centerX" secondItem="qk8-p2-Cp2" secondAttribute="centerX" id="eqe-IU-U90"/>
+                            <constraint firstItem="Yeo-gw-lhq" firstAttribute="centerX" secondItem="qk8-p2-Cp2" secondAttribute="centerX" id="gUT-zD-QO7"/>
+                            <constraint firstItem="th4-ZL-bjo" firstAttribute="top" secondItem="jgC-yu-Ybf" secondAttribute="bottom" constant="-3" id="h9I-kT-EOQ"/>
+                            <constraint firstItem="Yeo-gw-lhq" firstAttribute="top" secondItem="th4-ZL-bjo" secondAttribute="bottom" constant="2" id="hXv-Xr-V3B"/>
+                            <constraint firstItem="Keg-cD-dwe" firstAttribute="top" secondItem="pzc-QJ-Yk4" secondAttribute="bottom" constant="167" id="rDr-yX-44m"/>
+                            <constraint firstItem="V6H-3e-dyW" firstAttribute="top" secondItem="pzc-QJ-Yk4" secondAttribute="bottom" constant="31" id="tbA-QB-bOg" userLabel="Bartender.top = Top Layout Guide.bottom + 26"/>
+                            <constraint firstItem="pZL-SZ-pFi" firstAttribute="centerX" secondItem="qk8-p2-Cp2" secondAttribute="centerX" id="vup-tk-7wn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d80-iD-s26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="438"/>
+        </scene>
+        <!--View Controllerwith Table-->
+        <scene sceneID="vwZ-qr-RRp">
+            <objects>
+                <viewController id="QLh-ap-Ogl" customClass="ViewControllerwithTable" customModule="bartenderflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oaZ-bQ-rbF"/>
+                        <viewControllerLayoutGuide type="bottom" id="h86-HU-88G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wAP-3B-6YY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mojito" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1K-Lg-Jmy">
+                                <rect key="frame" x="162" y="95" width="90" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mojito" translatesAutoresizingMaskIntoConstraints="NO" id="9gU-2g-ctT">
+                                <rect key="frame" x="20" y="143" width="192" height="275"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E87-tf-bM0">
+                                <rect key="frame" x="220" y="143" width="151" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Ingredients:                         10 Mint leaves                     1/2 Lime                              2 tbls Sugar                          1 cup Ice                              1 1/2 fl oz White Rum            1/2 cup Club Soda</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-Nq-eJE">
+                                <rect key="frame" x="87" y="426" width="240" height="239"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Method: Place mint and lime in a glass. Crush mint and lime to release oils. Add more Lime and sugar, crush again. Fill glass to top with ice, Pour rum over ice. Fill glass with carbonated water and stir.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cDK-Nq-eJE" firstAttribute="centerX" secondItem="wAP-3B-6YY" secondAttribute="centerX" id="63E-zX-PnA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9gU-2g-ctT" secondAttribute="trailing" constant="182" id="Dw1-CN-usz"/>
+                            <constraint firstItem="Y1K-Lg-Jmy" firstAttribute="centerX" secondItem="wAP-3B-6YY" secondAttribute="centerX" id="HKO-4p-mUL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9gU-2g-ctT" secondAttribute="leading" id="ISV-UI-EKU"/>
+                            <constraint firstItem="E87-tf-bM0" firstAttribute="leading" secondItem="9gU-2g-ctT" secondAttribute="trailing" constant="8" id="Mh5-GQ-whe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E87-tf-bM0" secondAttribute="trailing" constant="23" id="OM8-7C-7X6"/>
+                            <constraint firstItem="E87-tf-bM0" firstAttribute="top" secondItem="oaZ-bQ-rbF" secondAttribute="bottom" constant="79" id="jyZ-Ck-k22"/>
+                            <constraint firstItem="9gU-2g-ctT" firstAttribute="top" secondItem="oaZ-bQ-rbF" secondAttribute="bottom" constant="79" id="m1C-to-YG1"/>
+                            <constraint firstItem="Y1K-Lg-Jmy" firstAttribute="top" secondItem="oaZ-bQ-rbF" secondAttribute="bottom" constant="31" id="uEk-gu-gg1" userLabel="Bartender.top = Top Layout Guide.bottom + 26"/>
+                            <constraint firstItem="cDK-Nq-eJE" firstAttribute="top" secondItem="oaZ-bQ-rbF" secondAttribute="bottom" constant="362" id="vrJ-i4-k8j"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NX5-uH-ixw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="438"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mojito" width="183" height="275"/>
+    </resources>
 </document>
